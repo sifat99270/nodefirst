@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="form" action="http://localhost:5000/" method="get">
+      <input id="email" type="email" name="email" />
+      <input id="password" type="password" name="password" />
+      <button type="submit">ok</button>
+    </form>
+  </body>
+  <script>
+    fetch("http://localhost:5000/", {
+      method: "POST",
+      body: JSON.stringify({
+        name: "sifat",
+      }),
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+    const form = document.querySelector("#form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.querySelector("#password");
+      const password = document.querySelector("#email");
+      const formData = new FormData(form);
+      try {
+        let resp = await fetch("http://localhost:5000/", {
+          method: "GET",
+        });
+        let resu = await resp.json();
+        console.log(resu);
+      } catch (err) {
+        console.log(err);
+      }
+    });
+  </script>
+</html>
