@@ -1,16 +1,14 @@
 {
   "name": "chatapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "some test",
   "allowedHosts": "all",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "14.x"
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js",
-    "build": "npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -29,5 +27,6 @@
     "node": "^20.7.0",
     "server": "^1.0.38",
     "socket.io": "^4.7.2"
-  }
+  },
+  "devDependencies": {}
 }
