@@ -21,7 +21,7 @@ const app = express();
 
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {
-  cors: ["http://localhost:5173", "http://localhost:5173"],
+  cors: ["https://hisabandchat.netlify.app", "http://localhost:5173"],
 });
 
 io.on("connection", (socket) => {
@@ -76,13 +76,7 @@ mongoose
 //cors setup
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://hisabandchat.netlify.app"],
-    methods: "GET,PUT,POST,DELETE",
-  })
-);
-app.use(
-  cors({
-    origin: ["http://localhost:5173", "https://hisabandchat.netlify.app"],
+    origin: ["https://hisabandchat.netlify.app", "http://localhost:5173"],
     methods: "GET,PUT,POST,DELETE",
   })
 );
