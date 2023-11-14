@@ -59,6 +59,9 @@ io.on("connection", (socket) => {
   socket.on("officeDelete", (data) => {
     socket.emit("getOfficeDelete", data);
   });
+  socket.on("tost", (data) => {
+    socket.emit("getTost", data);
+  });
   socket.on("disconnect", () => {});
 });
 
