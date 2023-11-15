@@ -79,7 +79,11 @@ mongoose
 //cors setup
 app.use(
   cors({
-    origin: ["https://hisabandchat.netlify.app", "http://localhost:5173"],
+    origin: [
+      "https://hisabandchat.netlify.app",
+      "https://65541ba9d4c7e03b57f28adc--hisabandchat.netlify.app/",
+      "http://localhost:5173",
+    ],
     methods: "GET,PUT,POST,DELETE",
   })
 );
