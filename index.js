@@ -82,6 +82,7 @@ app.use(
     origin: [
       "https://hisabandchat.netlify.app",
       "https://65541ba9d4c7e03b57f28adc--hisabandchat.netlify.app/",
+      "https://65541e3d75121d3baa923995--hisabandchat.netlify.app",
       "http://localhost:5173",
     ],
     methods: "GET,PUT,POST,DELETE",
