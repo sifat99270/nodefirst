@@ -5,7 +5,6 @@ const jwt = require("jsonwebtoken");
 //route
 async function loginController(req, res, next) {
   const loginuser = await user.findOne({ email: req.body.email });
-  console.log(loginuser);
   if (loginuser && loginuser._id) {
     const compire = await bcrypt.compare(req.body.password, loginuser.password);
     console.log(compire);
@@ -18,7 +17,6 @@ async function loginController(req, res, next) {
       };
       //token generate
       const token = jwt.sign(loginObj, process.env.JWT_SECRET);
-      console.log(token);
       res.status(200).json({
         token,
         loginObj,
