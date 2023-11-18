@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 //get user
 async function getUser(req, res, next) {
   let newUser;
-  const pass = req.body.password.toString();
+  const pass = req.body.password;
   const hash = await Hash(pass);
   if (req.files && req.files.length > 0) {
     newUser = new User({
