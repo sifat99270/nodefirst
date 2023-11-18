@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 async function getUser(req, res, next) {
   let newUser;
   const pass = req.body.password.toString();
-
+  console.log(pass);
   const hashPass = await bcrypt.hash(pass, 10);
   //const hash = await Hash(pass);
   if (req.files && req.files.length > 0) {
