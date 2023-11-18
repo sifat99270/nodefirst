@@ -8,7 +8,6 @@ async function loginController(req, res, next) {
   if (loginuser && loginuser._id) {
     const pass = `${req.body.password},${req.body.password}`;
     const compire = await bcrypt.compare(pass, loginuser.password);
-    console.log(compire);
     if (compire) {
       const loginObj = {
         name: loginuser.name,
